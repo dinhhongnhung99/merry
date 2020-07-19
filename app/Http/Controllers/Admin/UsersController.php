@@ -35,9 +35,8 @@ class UsersController extends Controller
     public function index()
     {
         $users = $this->repository->getUsers();
-        $role = $this->roleRepo->getRoles();
-
-        return  view('admin.users.index', compact('users','role'));
+             
+        return  view('admin.users.index', compact('users'));
     }
 
     /**
