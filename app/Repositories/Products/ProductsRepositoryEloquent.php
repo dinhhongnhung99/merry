@@ -96,16 +96,10 @@ class ProductsRepositoryEloquent extends BaseRepository implements ProductsRepos
     public function destroyProduct($id) {
         $object = Products::find($id);
         Storage::delete('products_thumbnail/'.$object->thumbnail);
-        if (empty($object->images)) {
-            $images = json_decode($object->images);
-            foreach ($images as $key => $value) {
-                Storage::delete('public/products_images/'.$value);
-            }
-        }
         $object->delete();
         return 'Xóa thành công';
     }
-
+    
     public function getProductById($id)
     {
         return Products::where('id', $id)

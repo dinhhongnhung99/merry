@@ -46,11 +46,11 @@ class NewsRepositoryEloquent extends BaseRepository implements NewsRepository
             'title' => $data['namenew'],
             'preview' => $data['namenew'],
             'detail'    => $data['detailnew'],
-            'thumbnail' => $this->handlePicture($data['pic'],'public/news_thumnail'),
-            'auth_id'   => Auth::id()
+            'thumbnail' => $this->handlePicture($data['pic'],'public/news_thumbnail'),
+            'user_id'   => Auth::id()
         ];
 
-        $this->create($arrCreate);
+        $this->insert($arrCreate);
 
         return 'Thêm thành công';
     }

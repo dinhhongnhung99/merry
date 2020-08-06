@@ -70,7 +70,7 @@
             display: none;
             padding: 6px 12px;
             border: 1px solid #ccc;
-            margin-top: -6px;
+            margin-top: 20px;
             padding-top: 3%;
         }
         .information-product .tabcontent table {
@@ -235,22 +235,10 @@
 
     <div class="home">
         <div class="home_container">
-            <div class="home_background" style="background-image:url({{ asset('home/images/categories.jpg') }})"></div>
-            <div class="home_content_container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="home_content">
-                                <div class="home_title">{{$objectProduct->category->name}}<span>.</span></div>
-                                <div class="home_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</p></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="home_background" style="background-image:url({{ asset('home/images/abc.jpg') }})"></div>          
+       
     </div>
-
+    </div>
     <!-- Product Details -->
 
     <div class="product_details">
@@ -273,15 +261,15 @@
 
                 <!-- Product Content -->
                 <div class="col-lg-6">
-                    <div class="details_content">
+                    <div class="details_content" >
                         <div class="details_name">{{$objectProduct->name}}</div>
                         @if($objectProduct->sale !=0)
-                            <div class="details_discount">{{number_format($objectProduct->price)}} đ</div>
+                            <div class="details_discount">Giá: {{number_format($objectProduct->price)}} đ</div>
                             <div class="details_price">
-                                {{ $objectProduct->checkQty() }}
+                            Giá: {{ $objectProduct->checkQty() }}
                             </div>
                         @else
-                            <div class="details_price">{{number_format($objectProduct->price)}} đ</div>
+                            <div class="details_price">Giá: {{number_format($objectProduct->price)}} đ</div>
                         @endif
 
 
@@ -291,7 +279,7 @@
                             <span>{{$objectProduct->category->name}}</span>
                         </div>
                         <div class="details_text">
-                            <p>{{$objectProduct->preview}}</p>
+                            <p>Mô tả: {{$objectProduct->preview}}</p>
                         </div>
                         <p class="alert-danger">{{$errors->first('qty')}}</p>
                         <!-- Product Quantity -->

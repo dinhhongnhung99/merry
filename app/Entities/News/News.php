@@ -25,7 +25,7 @@ class News extends Model implements Transformable
     ];
 
     public function creator() {
-        return $this->belongsTo('App\Entities\Users\Users','auth_id');
+        return $this->belongsTo('App\Entities\Users\Users','user_id');
     }
 
     public function getImg(){

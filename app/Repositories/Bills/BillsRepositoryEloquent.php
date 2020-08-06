@@ -91,7 +91,7 @@ class BillsRepositoryEloquent extends BaseRepository implements BillsRepository
 
         Cart::destroy();
 
-        return 'Đơn hàng được xác nhận thành công';
+        return 'Đơn hàng được xác nhận thành công và kiểm tra gmail để xác nhận';
     }
 
     public function createBillDetail($bill_id) {

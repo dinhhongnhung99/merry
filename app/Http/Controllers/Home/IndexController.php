@@ -73,7 +73,7 @@ class IndexController extends Controller
 
     public function news() {
         $news = $this->newRepository->all();
-
+        
         return view('home.page.news', compact('news'));
     }
 

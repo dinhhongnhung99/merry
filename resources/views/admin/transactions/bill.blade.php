@@ -50,8 +50,8 @@
 <body>
     <div id="bill">
         <div class="bill-title">
-            <h3>Sakura Shop</h3>
-            <h5>Đc: Hải Châu - Đà Nẳng</h5>
+            <h3>THE MERRY SHOP</h3>
+            <h5>Đc: K118.19 Mai Lão Bạng, Hải Châu, Đà Nẳng</h5>
         </div>
         <div class="bill-footer" >
             <table class="table" style="width: 100%">

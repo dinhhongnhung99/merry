@@ -67,22 +67,7 @@
 
     <!-- Home -->
 
-    <div class="home">
-        <div class="home_container">
-            <div class="home_background" style="background-image:url({{ asset('home/images/categories.jpg') }})"></div>
-            <div class="home_content_container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="home_content">
-                                <div class="home_title">{{$newDetail->title}}<span>.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Product Details -->
 

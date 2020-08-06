@@ -125,11 +125,11 @@
                                 </div>
                                 <div>
                                     <!-- Subject -->
-                                    <label for="contact_company">Subject</label>
+                                    <label for="contact_company">Chủ đề </label>
                                     <input type="text" name="title" id="contact_company" class="contact_input" required>
                                 </div>
                                 <div>
-                                    <label for="contact_textarea">Message*</label>
+                                    <label for="contact_textarea">Nội dung*</label>
                                     <textarea id="contact_textarea" name="content" class="contact_input contact_textarea" required="required"></textarea>
                                 </div>
                                 <button class="button contact_button"><span>Gởi</span></button>
@@ -142,43 +142,17 @@
                 <div class="col-lg-3 offset-xl-1 contact_col">
                     <div class="contact_info">
                         <div class="contact_info_section">
-                            <div class="contact_info_title">Marketing</div>
+                            <div class="contact_info_title">THE MERRY SHOP</div>
                             <ul>
-                                <li>Phone: <span>+53 345 7953 3245</span></li>
-                                <li>Email: <span>yourmail@gmail.com</span></li>
+                                <li>Số điện thoại: <span>0905540706</span></li>
+                                <li>Email: <span> shopthemerry.vn@gmail.com</span></li>
                             </ul>
                         </div>
-                        <div class="contact_info_section">
-                            <div class="contact_info_title">Shippiing & Returns</div>
-                            <ul>
-                                <li>Phone: <span>+53 345 7953 3245</span></li>
-                                <li>Email: <span>yourmail@gmail.com</span></li>
-                            </ul>
-                        </div>
-                        <div class="contact_info_section">
-                            <div class="contact_info_title">Information</div>
-                            <ul>
-                                <li>Phone: <span>+53 345 7953 3245</span></li>
-                                <li>Email: <span>yourmail@gmail.com</span></li>
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
-            <div class="row map_row">
-                <div class="col">
-
-                    <!-- Google Map -->
-                    <div class="map">
-                        <div id="google_map" class="google_map">
-                            <div class="map_container">
-                                <div id="map"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            
         </div>
     </div>
 @endsection

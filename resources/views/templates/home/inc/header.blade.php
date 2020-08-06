@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sakura - @yield('title')</title>
+    <title>THE MERRY - @yield('title')</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Sublime project">
@@ -19,13 +19,26 @@
 
     <!-- Header -->
 
+    <div class="header_abc">
+            
+        </div>
     <header class="header">
+        <div class="header_abc">
+          <div class="abc">
+            Hotline: 0905540706                                            
+            </div>                        
+        </div>
         <div class="header_container">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="header_content d-flex flex-row align-items-center justify-content-start">
-                            <div class="logo"><a href="{{route('home.index')}}">Sakura.</a></div>
+                       
+                        <div class="logo"><a href="{{route('home.index')}}">THE MERRY </a>
+                         <ul> Thời trang phái đẹp</ul>
+                         </div>
+                    
+                      
                             <nav class="main_nav">
                                 <ul>
                                     <li>

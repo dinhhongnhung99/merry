@@ -3,6 +3,7 @@
 @section('src-home')
     <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/tabs_product.css') }}">
 @endsection
 @section('content-home')
         <!-- Search Panel -->
@@ -167,6 +168,7 @@
     </div>
     @endif
     <!-- Products -->
+       
 
     <div class="products">
         <div class="container">
@@ -198,6 +200,44 @@
 
                 </div>
             </div>
+
+            <!-- product new -->
+            <div class="row">
+                <div class="col">
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tabone" checked="checked">
+                    <label for="tabone">Sản phẩm mới</label>
+                    <div class="tab">
+                        div.   
+                    </div>
+                    
+                    <input type="radio" name="tabs" id="tabtwo">
+                    <label for="tabtwo">Second Tab</label>
+                    <div class="tab">
+                        <div class="product_grid">
+                            <!-- Product -->
+                            @if(isset($data['products']))
+                            @foreach($data['products'] as $keyOfProducts => $valueOfProducts)
+                                <div class="product">
+                                    <div class="product_image"><img src="{{ asset("storage/products_thumbnail/$valueOfProducts->thumbnail") }}" alt=""></div>
+                                    @if($valueOfProducts->sale !=0)
+                                        <div class="product_extra product_sale"><a href="">Sale</a></div>
+                                    @else
+                                        <div class="product_extra product_new"><a href="">New</a></div>
+                                    @endif
+                                    <div class="product_content">
+                                        <div class="product_title"><a href="{{route('home.page.product',[$valueOfProducts->slug, $valueOfProducts->id])}}">{{$valueOfProducts->name}}</a></div>
+                                        <div class="product_price">{{$valueOfProducts->category->name}}</div>
+                                        <div class="product_price">{{ $valueOfProducts->checkQty() }}</div>
+                                    </div>
+                                </div>
+                            @endforeach
+                            @endif
+                        </div>
+                    </div>   
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -210,10 +250,10 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                        <div class="icon_box_image"><img src="{{ asset('home/images/icon_1.svg') }}" alt=""></div>
-                        <div class="icon_box_title">Free Shipping Worldwide</div>
+                       
+                        <div class="icon_box_title">GIỚI THIỆU </div>
                         <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
+                            <p>Ra đời từ năm 2020, chỉ từ một cửa hàng thời trang nhỏ, đến nay THE MERRY đã không ngừng phát triển và trở thành một hệ thống cửa hàng chuyên kinh doanh thời trang trẻ, là một trong những thương hiệu thời trang hàng đầu tại Đà Nẵng....</p>
                         </div>
                     </div>
                 </div>
@@ -221,10 +261,10 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                        <div class="icon_box_image"><img src="{{ asset('home/images/icon_2.svg') }}" alt=""></div>
-                        <div class="icon_box_title">Free Returns</div>
+                        
+                        <div class="icon_box_title">GIAO HÀNG TẬN NHÀ</div>
                         <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
+                            <p>Liên doanh với các hãng vận chuyển hàng đầu, THE MERRY hỗ trợ dịch vụ giao hàng tận nơi trên tất cả tỉnh thành. Ngoài ra, khách hàng cũng có thể chọn vẩn chuyển tốc hành, giao hàng theo ngày yêu cầu. </p>
                         </div>
                     </div>
                 </div>
@@ -232,11 +272,13 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                        <div class="icon_box_image"><img src="{{ asset('home/images/icon_3.svg') }}" alt=""></div>
-                        <div class="icon_box_title">24h Fast Support</div>
+                       
+                        <div class="icon_box_title">LIÊN HỆ</div>
                         <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
-                        </div>
+                            <p>Trụ sở: K118/19 Mai Lão Bạng, Hải Châu, Đà Nẵng</p>
+                            <p>Email: shopthemerry.vn@gmail.com</p>
+                            <p>Số điện thoại: 0905540706 </p>
+                                                   </div>
                     </div>
                 </div>
 

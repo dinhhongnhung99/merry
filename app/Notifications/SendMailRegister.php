@@ -45,7 +45,7 @@ class SendMailRegister extends Notification
         $verify = $this->verificationUrl($notifiable);
 
         return (new MailMessage)
-                    ->line('Chào bạn !')
+                    ->line('Chào bạn !!!')
                     ->line('Vui lòng xác thực tài khoản')
                     ->action('Xác thực', $verify)
                     ->line('Cảm ơn bạn đã sử dụng website của chúng tôi!');

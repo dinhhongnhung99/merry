@@ -71,14 +71,14 @@
 
     <div class="home">
         <div class="home_container">
-            <div class="home_background" style="background-image:url({{ asset('home/images/categories.jpg') }})"></div>
+            <div class="home_background" style="background-image:url({{ asset('home/images/abc.jpg') }})"></div>
             <div class="home_content_container">
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <div class="home_content">
-                                <div class="home_title">{{$productsOfCategories->name}}<span>.</span></div>
-                                <div class="home_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</p></div>
+                                <div class="home_title">  {{$productsOfCategories->name}}<span></span></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -141,9 +141,9 @@
                     </div>
                     <div class="product_pagination">
                         <ul>
-                            <li class="active"><a href="#">01.</a></li>
-                            <li><a href="#">02.</a></li>
-                            <li><a href="#">03.</a></li>
+                            <li class="active"><a href="#">01</a></li>
+                            <li><a href="#">02</a></li>
+                            <li><a href="#">03</a></li>
                         </ul>
                     </div>
 
@@ -151,7 +151,6 @@
             </div>
         </div>
     </div>
-
     <!-- Icon Boxes -->
 
     <div class="icon_boxes">
@@ -161,10 +160,10 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                        <div class="icon_box_image"><img src="{{ asset('home/images/icon_1.svg') }}" alt=""></div>
-                        <div class="icon_box_title">Free Shipping Worldwide</div>
+                      
+                        <div class="icon_box_title">GIỚI THIỆU </div>
                         <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
+                            <p>Ra đời từ năm 2020, chỉ từ một cửa hàng thời trang nhỏ, đến nay THE MERRY đã không ngừng phát triển và trở thành một hệ thống cửa hàng chuyên kinh doanh thời trang trẻ, là một trong những thương hiệu thời trang hàng đầu tại Đà Nẵng....</p>
                         </div>
                     </div>
                 </div>
@@ -172,28 +171,32 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                        <div class="icon_box_image"><img src="{{ asset('home/images/icon_2.svg') }}" alt=""></div>
-                        <div class="icon_box_title">Free Returns</div>
+                        
+                        <div class="icon_box_title">GIAO HÀNG TẬN NHÀ</div>
                         <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
+                            <p>Liên doanh với các hãng vận chuyển hàng đầu, THE MERRY hỗ trợ dịch vụ giao hàng tận nơi trên tất cả tỉnh thành. Ngoài ra, khách hàng cũng có thể chọn vẩn chuyển tốc hành, giao hàng theo ngày yêu cầu. </p>
                         </div>
                     </div>
                 </div>
+             
 
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                        <div class="icon_box_image"><img src="{{ asset('home/images/icon_3.svg') }}" alt=""></div>
-                        <div class="icon_box_title">24h Fast Support</div>
+                        
+                        <div class="icon_box_title">LIÊN HỆ</div>
                         <div class="icon_box_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie.</p>
-                        </div>
+                            <p>Trụ sở: K118/19 Mai Lão Bạng, Hải Châu, Đà Nẵng</p>
+                            <p>Email: shopthemerry.vn@gmail.com</p>
+                            <p>Số điện thoại: 0905540706 </p>
+                                                   </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+
 
         @endsection
         @section('src-footer')

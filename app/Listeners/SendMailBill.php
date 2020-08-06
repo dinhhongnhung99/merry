@@ -33,7 +33,7 @@ class SendMailBill
     {
         $dataMail = [
             'bill' => $event->bill,
-            'name'  => 'Bình đẹp trai, hiih'
+            'name'  => 'Themerry, hiih'
         ];
 
         Mail::to($event->bill->user->email)->send(new SendMailOrder($dataMail));

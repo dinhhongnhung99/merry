@@ -31,11 +31,11 @@
 
 <div class="limiter">
     <div class="container-login100">
-        <div class="wrap-login100">
+      
             <form action="{{route('admin.auth.postLogin')}}" method="post" class="login100-form validate-form">
 				@csrf
                 <span class="login100-form-title p-b-43">
-						Đăng nhập
+						ĐĂNG NHẬP
 					</span>
                 @if(Session::has('error'))
                     <div style="padding: 10px 0">
@@ -106,9 +106,8 @@
                 </div>--}}
             </form>
 
-            <div class="login100-more" style="background-image: url('{{ asset('admin/auth/images/bg-02.jpg') }}');">
-            </div>
-        </div>
+          
+        
     </div>
 </div>
 
