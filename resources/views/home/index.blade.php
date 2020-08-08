@@ -168,78 +168,111 @@
     </div>
     @endif
     <!-- Products -->
-       
 
-    <div class="products">
-        <div class="container">
-            <div class="row">
-                <div class="col">
 
-                    <div class="product_grid">
-
-                        <!-- Product -->
-                        @if(isset($data['products']))
-                        @foreach($data['products'] as $keyOfProducts => $valueOfProducts)
-                            <div class="product">
-                                <div class="product_image"><img src="{{ asset("storage/products_thumbnail/$valueOfProducts->thumbnail") }}" alt=""></div>
-                                @if($valueOfProducts->sale !=0)
-                                    <div class="product_extra product_sale"><a href="">Sale</a></div>
-                                @else
-                                    <div class="product_extra product_new"><a href="">New</a></div>
-                                @endif
-                                <div class="product_content">
-                                    <div class="product_title"><a href="{{route('home.page.product',[$valueOfProducts->slug, $valueOfProducts->id])}}">{{$valueOfProducts->name}}</a></div>
-                                    <div class="product_price">{{$valueOfProducts->category->name}}</div>
-                                    <div class="product_price">{{ $valueOfProducts->checkQty() }}</div>
-                                </div>
-                            </div>
-                        @endforeach
-                        @endif
+        <div class="products">
+            <div class="container">
+                <div>
+                    <div class="row tabs-product-index">
+                        <ul class="nav nav-tabs">
+                            <li><a  href="javascript:void(0)">Sản phẩm mới nhất</a></li>
+                        </ul>
                     </div>
-                    {{ $data['products']->links() }}
-
-                </div>
-            </div>
-
-            <!-- product new -->
-            <div class="row">
-                <div class="col">
-                <div class="tabs">
-                    <input type="radio" name="tabs" id="tabone" checked="checked">
-                    <label for="tabone">Sản phẩm mới</label>
-                    <div class="tab">
-                        div.   
-                    </div>
-                    
-                    <input type="radio" name="tabs" id="tabtwo">
-                    <label for="tabtwo">Second Tab</label>
-                    <div class="tab">
-                        <div class="product_grid">
-                            <!-- Product -->
-                            @if(isset($data['products']))
-                            @foreach($data['products'] as $keyOfProducts => $valueOfProducts)
-                                <div class="product">
-                                    <div class="product_image"><img src="{{ asset("storage/products_thumbnail/$valueOfProducts->thumbnail") }}" alt=""></div>
-                                    @if($valueOfProducts->sale !=0)
-                                        <div class="product_extra product_sale"><a href="">Sale</a></div>
-                                    @else
-                                        <div class="product_extra product_new"><a href="">New</a></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-content">
+                                <div id="pdNewPr" class="">
+                                    <div class="product_grid">
+                                        @if(isset($data['productsNew']))
+                                            @foreach($data['productsNew'] as $keyOfProducts => $valueOfProducts)
+                                                <div class="product">
+                                                    <div class="product_image"><img src="{{ asset("storage/products_thumbnail/$valueOfProducts->thumbnail") }}" alt=""></div>
+                                                    <div class="product_extra product_new"><a href="">New</a></div>
+                                                    <div class="product_content">
+                                                        <div class="product_title"><a href="{{route('home.page.product',[$valueOfProducts->slug, $valueOfProducts->id])}}">{{$valueOfProducts->name}}</a></div>
+                                                        <div class="product_price">{{$valueOfProducts->category->name}}</div>
+                                                        <div class="product_price">{{ $valueOfProducts->checkQty() }}</div>
+                                                    </div>
+                                                </div>
+                                        @endforeach
                                     @endif
-                                    <div class="product_content">
-                                        <div class="product_title"><a href="{{route('home.page.product',[$valueOfProducts->slug, $valueOfProducts->id])}}">{{$valueOfProducts->name}}</a></div>
-                                        <div class="product_price">{{$valueOfProducts->category->name}}</div>
-                                        <div class="product_price">{{ $valueOfProducts->checkQty() }}</div>
+                                    <!-- Product -->
                                     </div>
                                 </div>
-                            @endforeach
-                            @endif
+                            </div>
                         </div>
-                    </div>   
                     </div>
                 </div>
+                <div>
+                    <div class="row tabs-product-index">
+                        <ul class="nav nav-tabs">
+                            <li><a  href="javascript:void(0)">Sản phẩm bán chạy</a></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-content">
+                                <div id="pdSeling" class="">
+                                    <div class="product_grid">
+                                        @if(isset($data['productSale']))
+                                            @foreach($data['productSale'] as $keyOfProducts => $valueOfProducts)
+                                                <div class="product">
+                                                    <div class="product_image"><img src="{{ asset("storage/products_thumbnail/$valueOfProducts->thumbnail") }}" alt=""></div>
+                                                    @if($valueOfProducts->sale !=0)
+                                                        <div class="product_extra product_sale"><a href="">Sale</a></div>
+                                                    @else
+                                                        <div class="product_extra product_new"><a href="">New</a></div>
+                                                    @endif
+                                                    <div class="product_content">
+                                                        <div class="product_title"><a href="{{route('home.page.product',[$valueOfProducts->slug, $valueOfProducts->id])}}">{{$valueOfProducts->name}}</a></div>
+                                                        <div class="product_price">{{$valueOfProducts->category->name}}</div>
+                                                        <div class="product_price">{{ $valueOfProducts->checkQty() }}</div>
+                                                    </div>
+                                                </div>
+                                        @endforeach
+                                    @endif
+                                    <!-- Product -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row tabs-product-index">
+                        <ul class="nav nav-tabs">
+                            <li><a  href="javascript:void(0)">Sản phẩm giảm giá</a></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-content">
+                                <div id="pdSale" class="">
+                                    <div class="product_grid">
+                                        @if(isset($data['productSale']))
+                                            @foreach($data['productSale'] as $keyOfProducts => $valueOfProducts)
+                                                <div class="product">
+                                                    <div class="product_image"><img src="{{ asset("storage/products_thumbnail/$valueOfProducts->thumbnail") }}" alt=""></div>
+                                                    <div class="product_extra product_sale"><a href="">{{ $valueOfProducts->sale }} %</a></div>
+                                                    <div class="product_content">
+                                                        <div class="product_title"><a href="{{route('home.page.product',[$valueOfProducts->slug, $valueOfProducts->id])}}">{{$valueOfProducts->name}}</a></div>
+                                                        <div class="product_price">{{$valueOfProducts->category->name}}</div>
+                                                        <div class="product_price">{{ $valueOfProducts->checkQty() }}</div>
+                                                    </div>
+                                                </div>
+                                        @endforeach
+                                    @endif
+                                    <!-- Product -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>{{$data['productsNew']->links()}}</div>
             </div>
         </div>
-    </div>
+        <div>{{ $data['productsNew']->links() }}</div>
 
     <!-- Icon Boxes -->
 
@@ -250,7 +283,7 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                       
+
                         <div class="icon_box_title">GIỚI THIỆU </div>
                         <div class="icon_box_text">
                             <p>Ra đời từ năm 2020, chỉ từ một cửa hàng thời trang nhỏ, đến nay THE MERRY đã không ngừng phát triển và trở thành một hệ thống cửa hàng chuyên kinh doanh thời trang trẻ, là một trong những thương hiệu thời trang hàng đầu tại Đà Nẵng....</p>
@@ -261,7 +294,7 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                        
+
                         <div class="icon_box_title">GIAO HÀNG TẬN NHÀ</div>
                         <div class="icon_box_text">
                             <p>Liên doanh với các hãng vận chuyển hàng đầu, THE MERRY hỗ trợ dịch vụ giao hàng tận nơi trên tất cả tỉnh thành. Ngoài ra, khách hàng cũng có thể chọn vẩn chuyển tốc hành, giao hàng theo ngày yêu cầu. </p>
@@ -272,7 +305,7 @@
                 <!-- Icon Box -->
                 <div class="col-lg-4 icon_box_col">
                     <div class="icon_box">
-                       
+
                         <div class="icon_box_title">LIÊN HỆ</div>
                         <div class="icon_box_text">
                             <p>Trụ sở: K118/19 Mai Lão Bạng, Hải Châu, Đà Nẵng</p>

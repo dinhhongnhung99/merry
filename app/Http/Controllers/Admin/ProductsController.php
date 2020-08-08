@@ -101,7 +101,7 @@ class ProductsController extends Controller
     public function update(ProductsUpdate $request, $id)
     {
         $update = $this->repository->updateProduct($id, $request->all());
-        dd($objectProductDetail);
+       // dd($objectProductDetail);
         return redirect()
                 ->route('admin.products.get')
                 ->with(['msg'=>$update]);

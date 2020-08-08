@@ -99,7 +99,7 @@ class ProductsRepositoryEloquent extends BaseRepository implements ProductsRepos
         $object->delete();
         return 'Xóa thành công';
     }
-    
+
     public function getProductById($id)
     {
         return Products::where('id', $id)
@@ -151,5 +151,22 @@ class ProductsRepositoryEloquent extends BaseRepository implements ProductsRepos
 
     public function getProductsHome() {
         return Products::with('category')->paginate(8);
+    }
+
+    public function getProductsNew() {
+        return Products::with('category')
+            ->orderBy('id', 'DESC')
+            ->paginate(4);
+    }
+
+    public function getProductsSale() {
+        return Products::with('category')
+            ->where('sale', '>', 0)
+            ->orderBy('sale', 'ASC')
+            ->paginate(4);
+    }
+
+    public function getProductSeling() {
+        return Products::inRandomOrder()->paginate(4);
     }
 }

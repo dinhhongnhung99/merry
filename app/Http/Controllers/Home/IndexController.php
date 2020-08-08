@@ -33,7 +33,9 @@ class IndexController extends Controller
 
     public function index() {
         $data = [
-            'products' => $this->repository->getProductsHome(),
+            'productsNew' => $this->repository->getProductsNew(),
+            'productSale'   => $this->repository->getProductsSale(),
+            'productSeling' => $this->repository->getProductSeling(),
             'slides'    => $this->slideRepository->all(),
             'news'  => $this->newRepository->getNewsHome()
         ];
@@ -73,7 +75,7 @@ class IndexController extends Controller
 
     public function news() {
         $news = $this->newRepository->all();
-        
+
         return view('home.page.news', compact('news'));
     }
 
