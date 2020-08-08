@@ -269,7 +269,6 @@
                         </div>
                     </div>
                 </div>
-                <div>{{$data['productsNew']->links()}}</div>
             </div>
         </div>
         <div>{{ $data['productsNew']->links() }}</div>
