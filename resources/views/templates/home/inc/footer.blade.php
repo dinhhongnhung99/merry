@@ -35,6 +35,21 @@
 <script src="{{ asset('home/plugins/Isotope/isotope.pkgd.min.js') }}"></script>
 <script src="{{ asset('home/plugins/easing/easing.js') }}"></script>
 <script src="{{ asset('home/plugins/parallax-js-master/parallax.min.js') }}"></script>
+<script>
+    $ (function () {
+        $('#formSearch').submit(function (e) {
+            e.preventDefault();
+            let searchUrl = $(this).data('search-src');
+            let keyword = $('.search_input').val();
+
+            if (keyword.length > 0) {
+                window.location.href = searchUrl + '?keyword=' + keyword;
+                return;
+            }
+
+        });
+    });
+</script>
 @yield('src-footer')
 </body>
 </html>

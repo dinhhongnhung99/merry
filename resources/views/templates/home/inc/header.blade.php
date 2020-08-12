@@ -45,10 +45,10 @@
                                           <!-- Search -->  
                                      
                                       <div class="col-xs-6 col-sm-12  col-md-offset-1">
-                                        <form class="searchform" role="search" method="get" action="{{asset('tim-kiem/')}}">
+                                      <form class="searchform" id="formSearch" role="search" method="get" data-search-src="{{ route('home.search') }}">
                                             <div class="input-group">
                                             <div class="input-group-btn">
-                                                <input type="text" class="form-control" placeholder="Nhập bạn cần tìm kiếm" name="result">
+                                                <input type="text"  class="form-control search_input" placeholder="Nhập bạn cần tìm kiếm" name="result">
                                             </div>
                                             <div class="input-group-btn">
                                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search">Search</i></button>

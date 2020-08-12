@@ -32,4 +32,6 @@ interface ProductsRepository extends RepositoryInterface
     public function getProductsNew();
     public function getProductsSale();
     public function getProductSeling();
+
+    public function search($keyword);
 }

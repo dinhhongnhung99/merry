@@ -13,7 +13,7 @@
                    <ul> Kết quả tìm kiếm: ...</ul>
                     <!-- Product Sorting -->
                     <div class="sorting_bar d-flex flex-md-row flex-column align-items-md-center justify-content-md-start">
-                        <div class="results">Tổng <span>....</span> sản phẩm</div>
+                        <div class="results">Tổng <span>{{ count($data) }}</span> sản phẩm</div>
                         <div class="sorting_container ml-md-auto">
                             <div class="sorting">
                                 <ul class="item_sorting">
@@ -36,19 +36,21 @@
             <div class="row">
                 <div class="col">
                     <div class="product_grid">
+                        @foreach ($data as $item)
                             <div class="product">
-                                <div class="product_image"></div>
+                                <div class="product_image">
+                                    <img src="{{ $item->getImg() }}" alt="">
+                                </div>
                                 <div class="product_extra product_new"><a href="">New</a></div>
                                 {{--<div class="product_extra product_sale"></div>--}}
                                 <div class="product_content">
                                     <div class="product_title">
-                                   
+                                        {{ $item->name }}
                                     </div>
-                                    <div class="product_price">Giá: ..đ</div>
+                                    <div class="product_price">Giá: {{ $item->getPrice() }} đ</div>
                                 </div>
                             </div>
-                     
-
+                        @endforeach
                     </div>
                     <div class="product_pagination">
                         <ul>

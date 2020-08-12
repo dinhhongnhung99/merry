@@ -169,4 +169,8 @@ class ProductsRepositoryEloquent extends BaseRepository implements ProductsRepos
     public function getProductSeling() {
         return Products::inRandomOrder()->paginate(4);
     }
+
+    public function search($keyword) {
+        return $this->model->where('name','like', '%'.$keyword.'%')->get();
+    }
 }
