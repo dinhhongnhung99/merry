@@ -103,4 +103,9 @@ class IndexController extends Controller
         return redirect()->back();
 
     }
+   
+    public function search()
+    {
+        return view('home.page.search');
+    }
 }

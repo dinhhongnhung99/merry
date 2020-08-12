@@ -7,6 +7,7 @@
     <meta name="description" content="Sublime project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/bootstrap4/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/bootstrap4/timkiem.css') }}">
     <link href="{{ asset('home/plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ asset('home/plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('home/plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
@@ -37,10 +38,26 @@
                         <div class="logo"><a href="{{route('home.index')}}">THE MERRY </a>
                          <ul> Thời trang phái đẹp</ul>
                          </div>
-                    
-                      
+                          
+                         
                             <nav class="main_nav">
-                                <ul>
+                            <ul>
+                                          <!-- Search -->  
+                                     
+                                      <div class="col-xs-6 col-sm-12  col-md-offset-1">
+                                        <form class="searchform" role="search" method="get" action="{{asset('tim-kiem/')}}">
+                                            <div class="input-group">
+                                            <div class="input-group-btn">
+                                                <input type="text" class="form-control" placeholder="Nhập bạn cần tìm kiếm" name="result">
+                                            </div>
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search">Search</i></button>
+                                                </div>
+                                            <div>
+                                        </form>
+                                        </div>
+                                </ul>
+                               <ul>
                                     <li>
                                         <a href="{{route('home.index')}}">Trang chủ</a>
                                     </li>
@@ -54,10 +71,18 @@
                                     </li>
                                     <li><a href="{{route('home.page.news')}}">Tin tức</a></li>
                                     <li><a href="{{route('home.page.contact')}}">Liên hệ</a></li>
+                                    
                                 </ul>
+                                                                 
+                           
+                                
                             </nav>
-
+                           
+                             
+                   
                             <div class="header_extra ml-auto">
+                             
+                              
                                 <div class="shopping_cart">
                                     <a href="{{route('home.shopping.index')}}">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -75,6 +100,7 @@
                                 </div>
 
                                 <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                            
                             </div>
                             <div class="account">
                                 @if( Auth::check() )
@@ -92,8 +118,16 @@
                                     </div>
                                 @endif
                             </div>
+                            
+                            
                         </div>
+                        
                     </div>
                 </div>
+                
             </div>
+            
+            
+                                
         </div>
+        

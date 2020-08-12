@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/tabs_product.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('home/styles/bootstrap4/bootstrap.min.css') }}">
 @endsection
 @section('content-home')
         <!-- Search Panel -->
@@ -213,7 +214,7 @@
                         <div class="col">
                             <div class="tab-content">
                                 <div id="pdSeling" class="">
-                                    <div class="product_grid">
+                                    <div class="product_grid"style="position: relative;height: 350px;">
                                         @if(isset($data['productSale']))
                                             @foreach($data['productSale'] as $keyOfProducts => $valueOfProducts)
                                                 <div class="product">
@@ -271,7 +272,7 @@
                 </div>
             </div>
         </div>
-        <div>{{ $data['productsNew']->links() }}</div>
+       
 
     <!-- Icon Boxes -->
 
