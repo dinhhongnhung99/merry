@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                   <ul> Kết quả tìm kiếm: ...</ul>
+                <ul> Kết quả tìm kiếm: <strong>{{ $keyword }}</strong></ul>
                     <!-- Product Sorting -->
                     <div class="sorting_bar d-flex flex-md-row flex-column align-items-md-center justify-content-md-start">
                         <div class="results">Tổng <span>{{ count($data) }}</span> sản phẩm</div>

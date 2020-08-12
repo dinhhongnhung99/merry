@@ -109,6 +109,6 @@ class IndexController extends Controller
         $keyword = $request->get('keyword'); 
         $data = $this->repository->search($keyword);
             
-        return view('home.page.search', compact('data'));
+        return view('home.page.search', compact('data', 'keyword'));
     }
 }
